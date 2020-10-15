@@ -1,4 +1,6 @@
-﻿namespace kosar2004
+﻿using System.Text;
+
+namespace kosar2004
 {
     internal class Meccs
     {
@@ -27,7 +29,10 @@
         public string Kiir()
         {
             //Tau Cerámica -Winterthur F.C.Barcelona(72:79)
-            return $"{Hazai}-{Idegen} ({HPont}:{IPont})";
+            StringBuilder vissza = new StringBuilder();
+            vissza.Append($"{Hazai}-{Idegen} ({HPont}:{IPont})");
+            return vissza.ToString();
+                //$"{Hazai}-{Idegen} ({HPont}:{IPont})";
         }
     }
 }
