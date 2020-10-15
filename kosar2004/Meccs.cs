@@ -8,14 +8,21 @@
         public int IPont { get; private set; }
         public string Hely { get; private set; }
         public string Ido { get; private set; }
-        public Meccs(string hazai, string idegen, int hpont, int ipont, string hely, string ido)
+        public Meccs(/*string hazai, string idegen, int hpont, int ipont, string hely, string ido*/string sor)
         {
-            this.Hazai = hazai;
+            string[] adatok = sor.Split(';');
+            Hazai = adatok[0];
+            Idegen = adatok[1];
+            HPont = int.Parse(adatok[2]);
+            IPont = int.Parse(adatok[3]);
+            Hely = adatok[4];
+            Ido = adatok[5];
+            /*this.Hazai = hazai;
             this.Idegen = idegen;
             this.HPont = hpont;
             this.IPont = ipont;
             this.Hely = hely;
-            this.Ido = ido;
+            this.Ido = ido;*/
         }
     }
 }
