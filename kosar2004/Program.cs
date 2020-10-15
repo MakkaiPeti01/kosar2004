@@ -80,7 +80,7 @@ namespace kosar2004
             Console.WriteLine("6. feladat:");
             foreach (var i in nov)
             {
-                Console.WriteLine($"\t{i.Hazai}");
+                Console.WriteLine($"\t{i.Hazai} - {i.Idegen} ({i.HPont}:{i.IPont})");
             }
         }
         static void Hetedik()
@@ -105,6 +105,16 @@ namespace kosar2004
                 }
             }
         }
+        static void Nyolcadik()
+        {
+            //Tau Cerámica - Winterthur F.C. Barcelona (72:79)
+            StreamWriter ir = new StreamWriter("eredmenyek.txt");
+            foreach (var i in meccsek)
+            {
+                ir.WriteLine(i.Kiir());
+            }
+            ir.Close();
+        }
         static void Main(string[] args)
         {
             //var h = new Meccs("7up Joventut","Adecco Estudiantes",81,73,"Palacio Mun. De Deportes De Badalona","2005-04-03");
@@ -115,6 +125,7 @@ namespace kosar2004
             Otodik();
             Hatodik();
             Hetedik();
+            Nyolcadik();
             Console.ReadKey();
         }
     }

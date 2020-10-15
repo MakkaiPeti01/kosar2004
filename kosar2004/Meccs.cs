@@ -24,5 +24,10 @@
             this.Hely = hely;
             this.Ido = ido;*/
         }
+        public string Kiir()
+        {
+            //Tau Cerámica -Winterthur F.C.Barcelona(72:79)
+            return $"{Hazai}-{Idegen} ({HPont}:{IPont})";
+        }
     }
 }
